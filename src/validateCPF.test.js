@@ -20,3 +20,20 @@ test("espera validar um CPF correto",()=>{
 
     expect(isValidated).toBe(true);
 });
+
+test("espera validar um CPF com quantidade de caracteres abaixo",()=>{
+    const cpf = "23.456.78";
+    const isValidated = validate(cpf);
+
+    expect(isValidated).toBe(false);
+});
+
+
+test("espera validar um CPF null",()=>{
+    const cpf = null;
+    const isValidated = validate(cpf);
+
+    expect(isValidated).toBe(false);
+});
+
+
